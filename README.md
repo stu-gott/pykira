@@ -34,7 +34,7 @@ Additionally, KiraReceiver is able to use NEC codes. These will be of the form "
 
 Using in Home Assistant:
 ----------
-Pykira primarily exists to be used as a platform in Home Assistant. When the kira platform is first loaded, a file named ```kira_codes.yaml``` will be created in your configuration directory. You will need to add each code the kira platform should respond to here.
+PyKira primarily exists to be used as a platform in Home Assistant. When the kira platform is first loaded, a file named ```kira_codes.yaml``` will be created in your configuration directory. You will need to add each code the kira platform should respond to here.
 
 An example might look like this:
 
