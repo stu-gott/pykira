@@ -27,7 +27,7 @@ class KiraModule(object):
         if rawCode:
             self.codeMap[codeName] = rawCode
 
-    def sendCode(self, codeName):
+    def sendCode(self, codeName, repeat=1, delay=0.05):
         code = self.codeMap.get(codeName)
         if code:
             sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -36,5 +36,7 @@ class KiraModule(object):
                 code = "%s\n" % code
             else:
                 code = bytes("%s\n" % code, "ascii")
-            sock.send(code)
+            for i in range(repeat):
+                sock.send(code)
+                time.sleep(delay)
             sock.close()
