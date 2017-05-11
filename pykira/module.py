@@ -4,6 +4,7 @@ KIRA interface to send UDP packets to a Keene Electronics IR-IP bridge.
 # pylint: disable=import-error
 import socket
 import sys
+import time
 
 from . import utils
 
